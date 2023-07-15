@@ -1,0 +1,22 @@
+{
+  "repository": { "url": "https://github.com/tannertanner1/pages-router" },
+  "bugs": { "url": "https://github.com/tannertanner1/pages-router/issues" },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^13.4.10",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "daisyui": "^3.2.1",
+    "postcss": "^8.4.26",
+    "tailwindcss": "^3.3.3"
+  }
+}

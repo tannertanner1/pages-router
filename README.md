@@ -1,20 +1,63 @@
-clone
+next.js app manually installed using javascript, the pages router, and tailwind, deployed to vercel
+  - [next@latest](https://nextjs.org/docs/getting-started/installation#manual-installation)
+  - [tailwindcss](https://tailwindcss.com/docs/guides/nextjs)
+    - [bradlc.vscode-tailwindcss](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+  - [daisyui@latest](https://daisyui.com/components)
+  - [react-icons](https://react-icons.github.io/react-icons)
+
+<br>
+
+###### installation
 
 ```bash
-cd && git clone https://github.com/tannertanner1/pages-router.git
-cd pages-router # && code .
-npm i
+cd && git clone https://github.com/tannertanner1/pages-router.git # github.com/new
+cd pages-router && code . # open
+touch .gitignore # npm i
+
+npm init -y
+npm i next@latest react@latest react-dom@latest
 ```
 
-manual
+<br>
+
+###### routing
 
 ```bash
-# Create a new repository: https://github.com/new
+mkdir pages && cd pages
+touch index.js _app.js _document.js
+touch about.js book.js contact.js && cd ..
+```
 
-mkdir <dir> && cd <dir> # && code .
-npm init -y
+<br>
 
-git init
-git remote add origin https://github.com/<user>/<dir>.git
-git add . && git commit -m "" && git push -u origin main
+###### styling
+
+```bash
+npm i tailwindcss postcss autoprefixer -D
+npx tailwindcss init -p
+
+touch globals.css
+
+npm i daisyui@latest -D
+npm i react-icons -S
+```
+
+note: add `import "../globals.css";` in `./pages/_app.js` and `plugins: [require("daisyui")]` in `tailwind.config.js`
+
+<br>
+
+###### components
+
+```bash
+mkdir components && cd components
+touch hover.js navbar.js hero.js screen.js anchor.js email.js && cd ..
+```
+
+<br>
+
+###### deployment
+```bash
+npm run dev
+
+ga && gc "" && gp # git add . && git commit -m "" && git push -u origin main
 ```
