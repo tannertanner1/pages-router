@@ -1,3 +1,5 @@
+<br>
+
 next.js app manually installed using javascript, the pages router, and tailwind, deployed to vercel
   - [next@latest](https://nextjs.org/docs/getting-started/installation#manual-installation)
   - [tailwindcss](https://tailwindcss.com/docs/guides/nextjs)
@@ -60,4 +62,8 @@ touch hover.js navbar.js hero.js screen.js anchor.js email.js && cd ..
 npm run dev
 
 ga && gc "" && gp # git add . && git commit -m "" && git push -u origin main
+
+# vercel.com/new
 ```
+
+<br>
