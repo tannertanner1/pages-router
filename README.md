@@ -67,3 +67,13 @@ ga && gc "" && gp # git add . && git commit -m "" && git push -u origin main
 ```
 
 <br>
+
+###### analytics
+```bash
+npm i @vercel/analytics # vercel.com/docs/concepts/analytics
+```
+
+note: add `import { Analytics } from "@vercel/analytics/react";` and `<Analytics />` in `./pages/_app.js`
+
+
+<br>
