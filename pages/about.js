@@ -1,18 +1,42 @@
-import Navbar from '../components/navbar.js';
-import Anchor from '../components/anchor.js';
+import Navbar from "../components/navbar.js";
+import Section from "../components/section.js";
+import Anchor from "../components/anchor.js";
 
 export default function About() {
   return (
-    <div> 
+    <div>
       <Navbar />
+      <div className="flex flex-col items-center py-8">
+        <Anchor href="teacher" text="Teacher" />
+          <Section id="teacher">
+            <p></p>
+          </Section>
 
-        <Anchor href={`/about#teacher`} text="Teacher" />
-        <Anchor href={`/about#lessons`} text="Lessons" />
-        <Anchor href={`/about#availability`} text="Availability" />
-        <Anchor href={`/about#calendar`} text="Calendar" />
-        <Anchor href={`/about#policy`} text="Policy" />
-        <Anchor href={`/about#reviews`} text="Reviews" />
-        
+        <Anchor href="lessons" text="Lessons" />
+          <Section id="lessons">
+            <p>. . .</p>
+          </Section>
+          
+        <Anchor href="availability" text="Availability" />
+          <Section id="availability">
+            <p></p>
+          </Section>
+
+        <Anchor href="calendar" text="Calendar" />
+          <Section id="calendar">
+            <p>. . .</p>
+          </Section>
+
+        <Anchor href="policy" text="Policy" />
+          <Section id="policy">
+            <p></p>
+          </Section>
+
+        <Anchor href="reviews" text="Reviews" />
+          <Section id="reviews">
+            <p>. . .</p>
+          </Section>
+      </div>
     </div>
   );
 }

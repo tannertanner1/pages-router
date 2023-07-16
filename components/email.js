@@ -1,6 +1,6 @@
 export default function Email() {
   return (
-    <div className="container mx-auto py-8 flex items-center justify-center mt-8">
+    <div className="container mx-auto py-8 flex items-center justify-center mt-5">
       <form className="max-w-md mx-auto">
 
         <div className="mb-4">

@@ -1,19 +1,24 @@
-import Screen from "../components/screen.js";
-import Link from "next/link";
-import Hover from "../components/hover.js";
-
-import { FaHashtag } from "react-icons/fa";
+import { useRouter } from "next/router";
+import { Link } from "react-scroll";
 
 export default function Anchor({ href, text }) {
+  const router = useRouter();
+  const handleClick = () => {
+    router.replace(`${router.pathname}#${href}`);
+  };
+  
   return (
-    <div className="flex items-center justify-items-start p-26">
-      <Screen classNames={["mr-44", "mr-24"]} />
-
-      <Link href={href}>
-        <Hover icon={FaHashtag} className="w-3 h-3 text-gray-700" />
-      </Link>
-
-      <h1 className="text-4xl ml-2">{text}</h1>
-    </div>
+    <Link
+      activeClass="font-bold"
+      to={href}
+      spy={true}
+      smooth={true}
+      offset={-100}
+      duration={500}
+      className="text-3xl text-gray-500 hover:text-gray-700 cursor-pointer"
+      onClick={handleClick}
+    >
+      {text}
+    </Link>
   );
 }

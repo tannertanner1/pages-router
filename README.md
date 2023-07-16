@@ -51,8 +51,9 @@ note: add `import "../globals.css";` in `./pages/_app.js` and `plugins: [require
 ###### components
 
 ```bash
+npm i react-scroll
 mkdir components && cd components
-touch hover.js navbar.js hero.js screen.js anchor.js email.js && cd ..
+touch hover.js navbar.js hero.js screen.js anchor.js section.js email.js && cd ..
 ```
 
 <br>
@@ -74,6 +75,5 @@ npm i @vercel/analytics # vercel.com/docs/concepts/analytics
 ```
 
 note: add `import { Analytics } from "@vercel/analytics/react";` and `<Analytics />` in `./pages/_app.js`
-
 
 <br>
