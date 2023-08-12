@@ -1,0 +1,114 @@
+/* @import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities"; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    @apply
+      w-full h-full
+      /* scroll-smooth */
+      bg-light bg-opacity-100 
+      dark:bg-dark dark:bg-opacity-100;
+  }
+}
+
+@layer components {
+  .menu {
+    @apply
+      shadow-inner drop-shadow-xl
+      dark:shadow-inner dark:drop-shadow-xl
+      /* bg-gradient-to-r from-dark via-dark to-dark
+      dark:bg-gradient-to-r dark:from-light dark:via-light dark:to-light */
+      /* bg-dark bg-opacity-75
+      dark:bg-light dark:bg-opacity-75 */
+      bg-dark
+      dark:bg-light
+  }
+  .menu-btn {
+    @apply
+      text-light text-opacity-90
+      dark:text-dark dark:text-opacity-90
+      hover:text-opacity-70      
+      ease-linear transition duration-300
+  }
+  .menu-btn.clicked {
+    @apply 
+      text-light text-opacity-30
+      dark:text-dark dark:text-opacity-30
+      hover:text-opacity-50      
+      ease-linear transition duration-300
+  }
+}
+
+@layer components {
+  .text {
+    @apply
+      text-light
+      dark:text-dark
+  }
+  .text-main {
+    @apply
+      text-dark
+      dark:text-light
+  }
+  .link {
+    @apply
+      bg-transparent drop-shadow-2xl
+      hover:bg-transparent hover:opacity-50
+      transition-opacity duration-300
+  }
+  .btn {
+    @apply
+      rounded border-0
+      font-medium hover:font-semibold
+
+      text-light text-opacity-90 hover:text-opacity-100
+      dark:text-dark dark:text-opacity-90 dark:hover:text-opacity-100
+
+      bg-dark bg-opacity-90 hover:bg-opacity-100
+      dark:bg-light dark:bg-opacity-90 dark:hover:bg-opacity-100
+      
+      shadow-inner drop-shadow-lg
+      transition-opacity duration-300
+  }
+}
+
+@layer components {
+  .drawer {
+    @apply
+      bg-dark bg-opacity-75
+      dark:bg-light dark:bg-opacity-75
+  }
+  .drawer-btn {
+    @apply
+      rounded border-0
+      font-medium hover:font-semibold
+      text-dark text-opacity-90 hover:text-opacity-100
+      dark:text-light dark:text-opacity-90 dark:hover:text-opacity-100
+      bg-light bg-opacity-90 hover:bg-opacity-100
+      dark:bg-dark dark:bg-opacity-90 dark:hover:bg-opacity-100
+      shadow-inner drop-shadow-lg
+      transition-opacity duration-300
+  }
+}
+
+@layer components {
+  .footer {
+    @apply
+      bg-dark bg-opacity-90
+      dark:bg-light dark:bg-opacity-90
+  }
+}
+
+@layer components {
+  .svg-social {
+    @apply   
+    text-light dark:text-dark
+      opacity-75 drop-shadow-2xl
+      hover:text-opacity-50
+      transition duration-300
+  }
+}

@@ -1,11 +1,9 @@
-import Navbar from "../components/navbar.js";
-import Hero from "../components/hero.js";
+import Main from "../components/main.js";
 
 export default function Home() {
   return (
-    <div> 
-      <Navbar />
-      <Hero />
-    </div>
+    <>
+      <Main />
+    </>
   );
 }

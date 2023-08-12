@@ -1,41 +1,23 @@
 import Link from "next/link";
-import Hover from "./hover.js";
 
-import { PiMusicNotesPlusBold } from "react-icons/pi";
-import { TbCalendarStar } from "react-icons/tb";
-import { FaTiktok, FaYoutube } from "react-icons/fa";
-import { LuMailQuestion } from "react-icons/lu";
-
-export default function Navbar() {
+export default function Navbar({ isDrawer, setDrawer }) {
   return (
-    <div className="navbar bg-base-100 tabs flex items-center justify-between p-26">
-      <div className="flex items-start">
-        <Link href="/about" className="flex items-end">
-          <Hover icon={PiMusicNotesPlusBold} className="ml-5" />
-        </Link>
-
-        <Link href="/book">
-          <Hover icon={TbCalendarStar} />
-        </Link>
-      </div>
-
-      <div className="flex items-end">
-        <div className="text-gray-700">
-          <Link href="https://www.tiktok.com">
-            <Hover icon={FaTiktok} />
+    <navbar className="sticky top-0 z-10 backdrop-filter backdrop-blur-sm">
+      <div className="menu px-3 py-3 flex items-center justify-between">
+        <div className="flex-1 ml-2">
+          <Link href="/">
+            <span className="link text text-3xl normal-case">Title</span>
           </Link>
         </div>
 
-        <div className="text-gray-700">
-          <Link href="https://www.youtube.com">
-            <Hover icon={FaYoutube} />
-          </Link>
+        <div className="flex-none mr-2">
+          <button className={`menu-btn ${isDrawer ? 'clicked' : ''}`} onClick={() => setDrawer(!isDrawer)}>
+            <svg className="w-10 h-10" strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d={isDrawer ? 'M6 18L18 6M6 6l12 12' : 'M3.75 9h16.5m-16.5 6.75h16.5'} strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
         </div>
-
-        <Link href="/contact">
-          <Hover icon={LuMailQuestion} className="mr-5" />
-        </Link>
       </div>
-    </div>
+    </navbar>
   );
 }
