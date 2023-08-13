@@ -11,12 +11,12 @@ export default function Footer() {
 
       <div className="flex flex-wrap flex-col items-center text-center justify-center">
         <div className="mb-4">
-          <Link href="/">
+          <Link href="/about">
             <span className="link text text-opacity-50 text-md">About</span>
           </Link>
         </div>
 
-        <Link href="/">
+        <Link href="/contact">
           <span className="link text text-opacity-50 text-md">Contact</span>
         </Link>
       </div>
