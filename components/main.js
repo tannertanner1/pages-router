@@ -8,13 +8,8 @@ export default function Main() {
         <p className="text-main opacity-50 text-xl py-2 mt-8 mb-4">Text</p>
         
         <div className="flex flex-row gap-y-4 gap-x-8 p-8">
-          <Link href="/about">
-            <button className="btn py-2 px-4 mr-3">Learn More</button>
-          </Link>
-          
-          <Link href="/sign-up">
-            <button className="btn py-2 px-4 mr-3">Book Now</button>
-          </Link>
+          <button className="btn py-2 px-4 mr-3"><Link href="/about">Learn More</Link></button>
+          <button className="btn py-2 px-4 mr-3"><Link href="/sign-up">Book Now</Link></button>
         </div>
       </div>
     </div>

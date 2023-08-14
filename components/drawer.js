@@ -10,44 +10,36 @@ export default function Drawer({ handleDrawer }) {
     );
   };
 
+  const links = ["Lessons", "Reviews", "Policy"];
+
   return (
-    <drawer className="drawer flex justify-center top-0 p-4">
-      <div className="py-4 px-4 overflow-y-auto">
-        <div className="space-y-2 flex flex-col ml-3">
+      <drawer className="drawer flex flex-col justify-center top-0 p-4">        
+        <button className="drawer-btn flex justify-center mt-2 mb-6 m-auto py-2 px-4" onClick={handleDrawer}>
+          <Link href="/sign-up">Sign Up</Link>
+        </button>
 
-          <div className="flex justify-center mt-2 mb-6">
-            <Link href="/sign-up">
-              <button className="drawer-btn m-auto py-2 px-4" onClick={handleDrawer}>Sign Up</button>
-            </Link>
-          </div>
-
-          <button className={`menu-btn text-lg flex flex-row ${isAccordion ? 'clicked' : ''}`} onClick={() => handleAccordion("about")}>
-            About
-            <svg className="mt-1 ml-1 w-4 h-4" stroke="currentColor" stroke-width="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d={isAccordion ? 'M4.5 15.75l7.5-7.5 7.5 7.5' : 'M19.5 8.25l-7.5 7.5-7.5-7.5'} stroke-linecap="round" stroke-linejoin="round" />
+        <div className="flex flex-col items-center">
+          <button className={`menu-btn text-lg flex flex-row mt-4 mr-0.5 ${isAccordion ? 'clicked' : ''}`} onClick={() => handleAccordion("about")}>
+            <svg className="mt-1 mr-1 w-4 h-4" stroke="currentColor" stroke-width="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
+            About
           </button>
 
           {isAccordion === "about" && (
-            <div className="flex flex-col space-y-2 mt-2 pl-4 text-md opacity-75">
-              <Link href="/about#lessons">
-                <span className="link text" onClick={handleDrawer}>Lessons</span>
-              </Link>
-              <Link href="/about#reviews">
-                <span className="link text" onClick={handleDrawer}>Reviews</span>
-              </Link>
-              <Link href="/about#policy">
-                <span className="link text" onClick={handleDrawer}>Policy</span>
-              </Link>
+            <div className="flex flex-col items-center ml-0.5 text-md opacity-75">
+              {links.map((link) => (
+                <ul className="link text mt-2" onClick={handleDrawer}>
+                  <li key={link}><Link href={`/about#${link.toLowerCase()}`}>{link}</Link></li>
+                </ul>
+              ))}
             </div>
           )}
 
-          <Link href="/contact">
-            <span className="link text text-lg mt-4 opacity-25" onClick={handleDrawer}>Contact</span>
-          </Link>
-
+          <div className="link text ml-0.5 mt-6 text-lg opacity-25" onClick={handleDrawer}>
+            <Link href="/contact">Contact</Link>
+          </div>
         </div>
-      </div>
     </drawer>
   );
 }

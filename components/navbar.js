@@ -5,10 +5,8 @@ export default function Navbar({ isDrawer, handleDrawer }) {
   return (
     <navbar className="sticky top-0 z-10 lg:backdrop-filter lg:backdrop-blur-sm">
       <div className="menu px-3 py-3 flex items-center justify-between">
-        <div className="flex-1 ml-2">
-          <Link href="/">
-            <span className="link text text-3xl normal-case" onClick={handleDrawer}>Title</span>
-          </Link>
+        <div className="link text flex-1 text-3xl ml-2" onClick={isDrawer ? handleDrawer : undefined}>
+          <Link href="/">Title</Link>
         </div>
 
         <div className="flex-none mr-2">
