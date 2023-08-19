@@ -18,12 +18,13 @@
 @layer components {
   .menu {
     @apply
-      shadow-inner drop-shadow-xl
-      dark:shadow-inner dark:drop-shadow-xl
+      /* shadow-inner drop-shadow-xl
+      dark:shadow-inner dark:drop-shadow-xl */
       /* bg-gradient-to-r from-dark via-dark to-dark
       dark:bg-gradient-to-r dark:from-light dark:via-light dark:to-light */
       /* bg-dark lg:bg-opacity-75
       dark:bg-light lg:dark:bg-opacity-75 */
+      /* lg:backdrop-filter lg:backdrop-blur-sm */
       bg-dark
       dark:bg-light
   }
@@ -56,8 +57,9 @@
   }
   .link {
     @apply
-      bg-transparent drop-shadow-2xl
-      lg:hover:bg-transparent lg:hover:opacity-50
+      /* bg-transparent drop-shadow-2xl */
+      bg-transparent
+      lg:hover:bg-transparent lg:hover:opacity-80
       transition-opacity duration-300
   }
   .btn {

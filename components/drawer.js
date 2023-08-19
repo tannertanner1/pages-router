@@ -1,9 +1,6 @@
-import { useState } from "react";
 import Link from "next/link";
 
-export default function Drawer({ handleDrawer }) {
-  const [isAccordion, setAccordion] = useState('');
-
+export default function Drawer({ handleDrawer, isAccordion, setAccordion }) {
   const handleAccordion = (accordion) => {
     setAccordion((prevAccordion) =>
       prevAccordion === accordion ? '' : accordion
@@ -13,7 +10,9 @@ export default function Drawer({ handleDrawer }) {
   const links = ["Lessons", "Reviews", "Policy"];
 
   return (
-      <drawer className="drawer flex flex-col justify-center top-0 p-4">        
+    <div className="relative">
+
+      <drawer className="drawer flex flex-col justify-center top-0 mb-2 p-4">        
         <button className="drawer-btn flex justify-center mt-2 mb-6 m-auto py-2 px-4" onClick={handleDrawer}>
           <Link href="/sign-up">Sign Up</Link>
         </button>
@@ -40,6 +39,8 @@ export default function Drawer({ handleDrawer }) {
             <Link href="/contact">Contact</Link>
           </div>
         </div>
-    </drawer>
+      </drawer>
+      
+    </div>
   );
 }

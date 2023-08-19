@@ -1,10 +1,11 @@
 import Link from "next/link";
 import Drawer from "./drawer.js"
 
-export default function Navbar({ isDrawer, handleDrawer }) {
+export default function Navbar({ isDrawer, handleDrawer, isAccordion, setAccordion }) {
   return (
-    <navbar className="sticky top-0 z-10 lg:backdrop-filter lg:backdrop-blur-sm">
-      <div className="menu px-3 py-3 flex items-center justify-between">
+    <div className="sticky top-0 z-10">
+      
+      <navbar className="menu px-3 py-3 flex items-center justify-between">
         <div className="link text flex-1 text-3xl ml-2" onClick={isDrawer ? handleDrawer : undefined}>
           <Link href="/">Title</Link>
         </div>
@@ -16,11 +17,12 @@ export default function Navbar({ isDrawer, handleDrawer }) {
             </svg>
           </button>
         </div>
-      </div>
+      </navbar>
       
-      <div className={`bg-black dark:bg-white text ${isDrawer ? 'block' : 'hidden'} top-16 bottom-0 z-40 h-screen overflow-y-auto transition-transform translate-x-0 w-full`}>
-        <Drawer handleDrawer={handleDrawer} />
+      <div className={`menu text absolute ${isDrawer ? 'block' : 'hidden'} top-16 bottom-0 z-40 h-screen overflow-y-auto transition-transform translate-x-0 w-full`}>
+        <Drawer handleDrawer={handleDrawer} isAccordion={isAccordion} setAccordion={setAccordion} />
       </div>
-    </navbar>
+
+    </div>
   );
 }
