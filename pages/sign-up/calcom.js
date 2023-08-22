@@ -11,7 +11,7 @@ export default function Calcom() {
 
   return (
     <div className="items-center p-4 z-0">
-      <Cal calLink={`${process.env.NEXT_PUBLIC_CALCOM_LINK}`} />
+      <Cal calLink="tannertanner1/trial" />
     </div>
   );
 }

@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Email() {
   const [name, setName] = useState('');
-  const [subject, setSubject] = useState('');
+  const [subject, setSubject] = useState('General');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [emailError, setEmailError] = useState('');
@@ -17,6 +17,7 @@ export default function Email() {
     };
 
     try {
+      // send data to API route
       const response = await fetch('/api/email', {
         method: 'POST',
         headers: {
@@ -24,7 +25,7 @@ export default function Email() {
         },
         body: JSON.stringify(data),
       });
-
+      // get response from server 
       if (response.status === 200) {
         console.log('Sent');
         setName('');
@@ -63,6 +64,7 @@ export default function Email() {
   };
 
   return (
+    // pass event to handleSubmit() function on submit
     <div className="relative flex items-center justify-center mt-4 py-4 px-8">
       <form onSubmit={handleSubmit}>
 

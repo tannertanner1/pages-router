@@ -7,18 +7,18 @@ export default async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: process.env.NEXT_PUBLIC_GMAIL_USER,
-        pass: process.env.NEXT_PUBLIC_GMAIL_PASS,
+        user: process.env.GMAIL_USER,
+        pass: process.env.GMAIL_PASS,
       },
     });
 
     try {
       const mailOptions = {
-        from: process.env.NEXT_PUBLIC_GMAIL_USER,
+        from: process.env.GMAIL_USER,
         to: email,
         envelope: {
           from: email,
-          to: process.env.NEXT_PUBLIC_GMAIL_USER,
+          to: process.env.GMAIL_USER,
         },
         subject: 'Contact',
         text: `Name: ${name}\nSubject: ${subject}\nEmail: ${email}\nMessage: ${message}`,
