@@ -28,8 +28,8 @@ export default function Nav({ isDropdown, setDropdown, handleDropdown }) {
         <div className="absolute ml-10 left-16 pt-2 m-5">
           <button className={`menu-btn ${isDropdown ? 'clicked' : ''}`} onClick={handleDropdown}>
             <div className="flex items-baseline">
-              <svg className="w-4 h-4 ml-12 mr-1.5" stroke="currentColor" stroke-width="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" stroke-linecap="round" stroke-linejoin="round" />
+              <svg className="w-4 h-4 ml-12 mr-1.5" stroke="currentColor" strokeWidth="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <div className="text-xl">About</div>
             </div>
@@ -50,7 +50,7 @@ export default function Nav({ isDropdown, setDropdown, handleDropdown }) {
       
         <div className="absolute right-0 m-5">
           <div className="flex flex-row">
-            <button className="link text text-lg opacity-40 mr-6 mt-0.5">
+            <button className="link text-neutral-400 dark:text-neutral-500 text-lg mr-6 mt-0.5">
               <Link href="/contact">Contact</Link>
             </button>
 

@@ -11,7 +11,7 @@ export default function Navbar({ isDrawer, handleDrawer, isAccordion, setAccordi
         </div>
 
         <div className="flex-none mr-2">
-          <button className={`menu-btn ${isDrawer ? 'clicked' : ''}`} onClick={handleDrawer}>
+          <button className={`menu-btn ${isDrawer ? 'clicked' : ''}`} onClick={handleDrawer} aria-label="Toggle menu">
             <svg className="w-10 h-10" strokeWidth="1.5" stroke="currentColor" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d={isDrawer ? 'M6 18L18 6M6 6l12 12' : 'M3.75 9h16.5m-16.5 6.75h16.5'} strokeLinecap="round" strokeLinejoin="round" />
             </svg>
