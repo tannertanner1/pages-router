@@ -1,9 +1,7 @@
 ---
 path: '/posts/guitar-lessons-online'
-# thumbnail
 image: '/assets/guitar-2.png'
 alt: 'Guitar'
-# metadata
 title: 'Guitar Lessons Online'
 date: '2023-07-06'
 description: 'Best guitar lessons online'

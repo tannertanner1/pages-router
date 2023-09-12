@@ -6,7 +6,7 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About | {siteName}</title>
+        <title>About</title>
         <meta name="description" content="About lessons, reviews, and policy" key="desc" />
       </Head>
 

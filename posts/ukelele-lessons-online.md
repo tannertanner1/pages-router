@@ -1,9 +1,7 @@
 ---
 path: '/posts/ukelele-lessons-online'
-# thumbnail
 image: '/assets/ukulele-1.png'
 alt: 'Ukelele'
-# metadata
 title: 'Ukelele Lessons Online'
 date: '2023-07-07'
 description: 'Best ukelele lessons online'

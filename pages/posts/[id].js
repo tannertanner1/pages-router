@@ -1,4 +1,4 @@
-import Meta from '../../components/meta.js';
+// import Meta from '../../components/meta.js';
 import Link from 'next/link';
 import Image from 'next/image';
 import Date from '../../components/date.js';
@@ -17,7 +17,7 @@ export async function getStaticPaths() {
 export default function Post({ postData }) {
   return (
     <div className="max-w-screen-sm px-4 mt-12 mb-24 mx-auto">
-      <Meta object={postData} />
+      {/* <Meta object={postData} property={''} type={''} /> */}
 
       <div className="flex flex-col items-center mb-3">
         <Link href="/posts">

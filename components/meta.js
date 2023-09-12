@@ -1,7 +1,7 @@
 import Head from 'next/head.js';
 import { postData } from '../pages/posts/[id].js';
 // import { pageData, structData } from './meta.js';
-import { pageData } from './meta.js';
+import { pageData } from '../meta.js';
 
 const siteName = "Site Name";
 const url = "https://pages-router-eight.vercel.app";
@@ -26,7 +26,7 @@ export const schema = {
     "@type": "BlogPosting",
     "author": {
       "@type": "Person",
-      "name": siteName
+      // "name": siteName
     },
     "thumbnail": `structData['BlogPosting'].image`,
     "headline": `structData['BlogPosting'].title`,
@@ -40,8 +40,8 @@ export const schema = {
     "description": `structData['Course'].description`,
     "provider": {
       "@type": "Organization",
-      "name": siteName,
-      "sameAs": `${url}${structData['Course'].path}`
+      // "name": siteName,
+      // "sameAs": `${url}${structData['Course'].path}`
     }
   },
 };
