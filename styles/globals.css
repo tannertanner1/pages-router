@@ -8,13 +8,28 @@
 
 @layer base {
   html, body {
-    @apply w-full h-full bg-white bg-opacity-100 dark:bg-black dark:bg-opacity-100
+    @apply
+      w-full h-full bg-white dark:bg-black font-sans leading-relaxed
+  }
+
+  h1 {
+    @apply text-4xl font-semibold leading-3 tracking-wider text-black dark:text-white
+  }
+  h2 {
+    @apply text-3xl font-medium leading-loose tracking-wide text-black dark:text-white
+  }
+
+  p {
+    @apply text-lg text-main
   }
 }
 
 @layer components {
-  .menu {
-    @apply bg-black dark:bg-white
+  .btn {
+    @apply rounded border-0 font-medium hover:font-semibold text-white text-opacity-90 hover:text-opacity-100 dark:text-black dark:text-opacity-90 dark:hover:text-opacity-100 bg-black bg-opacity-90 hover:bg-opacity-100 dark:bg-white dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300
+  }
+  .drawer-btn {
+    @apply rounded border-0 font-medium hover:font-semibold text-black text-opacity-90 hover:text-opacity-100 dark:text-white dark:text-opacity-90 dark:hover:text-opacity-100 bg-white bg-opacity-90 hover:bg-opacity-100 dark:bg-black dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300
   }
   .menu-btn {
     @apply text-white text-opacity-90 dark:text-black dark:text-opacity-90 hover:text-opacity-70 ease-linear transition duration-300
@@ -22,28 +37,70 @@
   .menu-btn.clicked {
     @apply text-white text-opacity-30 dark:text-black dark:text-opacity-30 hover:text-opacity-50 ease-linear transition duration-300
   }
+
+  .link {
+    @apply bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300
+  }
+  .footer {
+    @apply bg-black bg-opacity-90 dark:bg-white dark:bg-opacity-90
+  }
+
+}
+
+@layer utilities {
+  .back {
+    @apply text-gray-400 text-opacity-50 hover:animate-pulse ease-in-out
+  }
+  .date {
+    @apply font-semibold text-gray-400 dark:text-gray-600
+  }
+  .desc {
+    @apply text-gray-600 dark:text-gray-400
+  }
+  .social {
+    @apply text-white dark:text-black opacity-75 drop-shadow-2xl hover:text-opacity-50 transition duration-300
+  }  
+  .title {
+    @apply text-3xl font-semibold text-main link
+  }
+
+
+  .menu {
+    @apply bg-black dark:bg-white
+  }
+  .drawer {
+    @apply bg-black bg-opacity-75 dark:bg-white dark:bg-opacity-75
+  }
+  /*
+  .bg {
+    @apply bg-black dark:bg-white
+  }
+  .bg-invert {
+    @apply bg-white dark:bg-black
+  }
+  */
+
   .text {
     @apply text-white dark:text-black
   }
   .text-main {
     @apply text-black dark:text-white
   }
-  .link {
-    @apply bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300
+  /*
+  .text {
+    @apply text-black dark:text-white
   }
-  .btn {
-    @apply rounded border-0 font-medium hover:font-semibold text-white text-opacity-90 hover:text-opacity-100 dark:text-black dark:text-opacity-90 dark:hover:text-opacity-100 bg-black bg-opacity-90 hover:bg-opacity-100 dark:bg-white dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300
+  .text-invert {
+    @apply text-white dark:text-black
   }
-  .drawer-btn {
-    @apply rounded border-0 font-medium hover:font-semibold text-black text-opacity-90 hover:text-opacity-100 dark:text-white dark:text-opacity-90 dark:hover:text-opacity-100 bg-white bg-opacity-90 hover:bg-opacity-100 dark:bg-black dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300
-  }
-  .drawer {
-    @apply bg-black bg-opacity-75 dark:bg-white dark:bg-opacity-75
-  }
-  .footer {
-    @apply bg-black bg-opacity-90 dark:bg-white dark:bg-opacity-90
-  }
-  .svg-social {
-    @apply text-white dark:text-black opacity-75 drop-shadow-2xl hover:text-opacity-50 transition duration-300
-  }
+  */
+
 }
+
+/* img {
+  display: block;
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+} */

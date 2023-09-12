@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Link from "next/link"
+import Image from 'next/image';
 // import Footer from "../components/footer.js";
 
 export default function Home() {
@@ -8,11 +10,12 @@ export default function Home() {
         <title>Home</title>
         <meta name="description" content="Learn more about lessons or sign-up today" key="desc" />
       </Head>
-      
-      <div className="flex min-h-screen items-center text-center justify-center">
-        <div className="flex flex-col text-center justify-between mb-12">
-          <h1 className="text-black dark:text-white text-5xl font-bold">Header</h1>
-          <p className="text-black dark:text-white opacity-50 text-xl py-2 mt-8 mb-4">Text</p>
+
+      <div className="max-w-screen-sm px-4 mt-12 mb-24 mx-auto">      
+        <div className="flex flex-col items-center">
+          <Link href="/posts"><Image src="/profile.jpg" alt="alt" height={144} width={144} className="rounded-full mb-8 hover:animate-pulse ease-in-out" /></Link>
+          <h1 className="text-main text-4xl leading-10 font-bold tracking-wide mb-1 py-4">Blog</h1>
+          <p className="text-xl text-gray-600 text-opacity-50 dark:text-gray-400">Description</p>
         </div>
       </div>
       {/* <Footer /> */}
