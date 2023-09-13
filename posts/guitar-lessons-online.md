@@ -1,6 +1,6 @@
 ---
 image: '/assets/guitar-2.png'
-alt: 'Guitar'
+alt: 'AI generated guitar'
 title: 'Guitar Lessons Online'
 date: '2023-07-06'
 description: 'Best guitar lessons online'
@@ -10,6 +10,6 @@ description: 'Best guitar lessons online'
 
 10,000 hours in 30 minutes 😎
 
-![Alt text](/assets/guitar-0.png)
+![Alt](/assets/guitar-0.png "Title")
 
 Sign-up today for a free lesson 🎸

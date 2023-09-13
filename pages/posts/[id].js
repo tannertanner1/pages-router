@@ -61,14 +61,14 @@ export default function Post({ postData }) {
         
         <div className="flex flex-col items-center mb-3">
           <Link href="/posts">
-            <Image src={postData.image} alt={postData.alt} height={144} width={144} className="rounded-full mb-8 hover:animate-pulse ease-in-out" />
+            <Image priority={true} src={postData.image} alt={postData.alt} height={144} width={144} className="rounded-full mb-8" />
           </Link>
         </div>
 
-        <div className="prose dark:prose-invert prose-h2:text-gray-600 dark:prose-h2:text-gray-400">
+        <div className="prose dark:prose-invert prose-h2:text-gray-800 dark:prose-h2:text-gray-300">
           <h1 className="font-medium">{postData.title}</h1>
-          <div className="not-prose text-medium font-normal text-gray-400 dark:text-gray-600"><Date dateString={postData.date} /></div>
-            
+          <div className="date"><Date dateString={postData.date} /></div>
+  
           <article dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </div>
 
