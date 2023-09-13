@@ -1,4 +1,6 @@
-import Head from "next/head"
+import Head from "next/head";
+import { pageData } from "../../meta.js";
+
 import Link from "next/link";
 import Footer from "../../components/footer.js";
 
@@ -6,8 +8,19 @@ export default function Contact() {
   return (
     <>
       <Head>
-        <title>Contact</title>
-        <meta name="description" content="Contact forms for handling emails" key="desc" />
+        <link rel="icon" href="favicon.ico" />
+        <title>{pageData['contact'].index.title}</title>
+
+        <meta name="title" content={pageData['contact'].index.title} />
+        <meta name="description" content={pageData['contact'].index.description} key="desc" />
+
+        <meta property="og:image" content={pageData['contact'].index.image} />
+        <meta property="og:image:alt" content={pageData['contact'].index.alt} />
+        <meta property="og:title" content={pageData['contact'].index.title} />
+        <meta property="og:description" content={pageData['contact'].index.description} />
+        <meta property="og:site_name" content={"Site Name"} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://pages-router-eight.vercel.app${pageData['contact'].index.path}`} />
       </Head>
 
       <div className="flex items-center justify-center min-h-screen mx-4 my-6">

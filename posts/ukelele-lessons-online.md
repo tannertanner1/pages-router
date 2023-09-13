@@ -1,5 +1,4 @@
 ---
-path: '/posts/ukelele-lessons-online'
 image: '/assets/ukulele-1.png'
 alt: 'Ukelele'
 title: 'Ukelele Lessons Online'

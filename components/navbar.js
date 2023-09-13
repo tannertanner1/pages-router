@@ -1,5 +1,7 @@
 import Link from "next/link";
-import Drawer from "./drawer.js"
+import Drawer from "./drawer.js";
+
+import Image from 'next/image';
 
 export default function Navbar({ isDrawer, handleDrawer, isAccordion, setAccordion }) {
   return (
@@ -7,7 +9,7 @@ export default function Navbar({ isDrawer, handleDrawer, isAccordion, setAccordi
       
       <navbar className="menu px-3 py-3 flex items-center justify-between">
         <div className="link text flex-1 text-3xl ml-2" onClick={isDrawer ? handleDrawer : undefined}>
-          <Link href="/">Title</Link>
+          <Link href="/"><Image src="/profile.jpg" alt="alt" height={44} width={44} className="rounded-full" /></Link>
         </div>
 
         <div className="flex-none mr-2">

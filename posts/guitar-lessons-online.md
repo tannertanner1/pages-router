@@ -1,5 +1,4 @@
 ---
-path: '/posts/guitar-lessons-online'
 image: '/assets/guitar-2.png'
 alt: 'Guitar'
 title: 'Guitar Lessons Online'

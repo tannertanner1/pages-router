@@ -1,4 +1,6 @@
-import Head from "next/head"
+import Head from "next/head";
+import { pageData } from "../meta.js";
+
 import Content from "../components/content.js";
 import Footer from "../components/footer.js";
 
@@ -6,8 +8,19 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>About</title>
-        <meta name="description" content="About lessons, reviews, and policy" key="desc" />
+      <link rel="icon" href="favicon.ico" />
+        <title>{pageData['about'].title}</title>
+
+        <meta name="title" content={pageData['about'].title} />
+        <meta name="description" content={pageData['about'].description} key="desc" />
+
+        <meta property="og:image" content={pageData['about'].image} />
+        <meta property="og:image:alt" content={pageData['about'].alt} />
+        <meta property="og:title" content={pageData['about'].title} />
+        <meta property="og:description" content={pageData['about'].description} />
+        <meta property="og:site_name" content={"Site Name"} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://pages-router-eight.vercel.app${pageData['about'].path}`} />
       </Head>
 
       <Content />

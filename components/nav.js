@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Nav({ isDropdown, setDropdown, handleDropdown }) {
   const handleClick = (e) => {
@@ -22,29 +23,29 @@ export default function Nav({ isDropdown, setDropdown, handleDropdown }) {
 
       <nav className="grid grid-row-1 h-20 row-span-full bg-black dark:bg-white">
         <div className="absolute left-1 m-5">
-          <button className="link text ml-4 text-4xl"><Link href="/">Title</Link></button>
+          <Link href="/"><Image src="/profile.jpg" alt="alt" height={44} width={44} className="rounded-full" /></Link>
         </div>
 
         <div className="absolute ml-10 left-16 pt-2 m-5">
           <button className={`menu-btn ${isDropdown ? 'clicked' : ''}`} onClick={handleDropdown}>
             <div className="flex items-baseline">
-              <svg className="w-4 h-4 ml-12 mr-1.5" stroke="currentColor" strokeWidth="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-4 h-4 mr-1.5" stroke="currentColor" strokeWidth="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
               <div className="text-xl">About</div>
             </div>
 
             {isDropdown && (
-              <div className="flex flex-col text-start ml-6">
-                <ul className="menu absolute bg-opacity-25 rounded-2xl mt-10 ml-4">
-                  
-                  <Link href="/about"><svg className="w-6 h-6 ml-10 mr-1.5 mt-4" stroke="currentColor" strokeWidth="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <div className="flex flex-col text-start mr-10">
+                <ul className="bg-black dark:bg-white absolute dark:bg-opacity-50 bg-opacity-50 rounded-2xl mt-10">
+
+                  <Link href="/about"><svg className="w-6 h-6 ml-5 mr-1.5 mt-5" stroke="currentColor" strokeWidth="2.5" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3" strokeLinecap="round" strokeLinejoin="round" />
                   </svg></Link>
 
                   {links.map((link) => (
                     <li key={link} className="m-5 lg:hover:opacity-50 ease-linear transition duration-300">
-                      <button className="link text-main"><Link href={`/about#${link.toLowerCase()}`}>{link}</Link></button>
+                      <button className="link text"><Link href={`/about#${link.toLowerCase()}`}>{link}</Link></button>
                     </li>
                   ))}
                 </ul>

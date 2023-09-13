@@ -1,4 +1,6 @@
 import Head from "next/head";
+import { pageData } from "../../meta.js";
+
 import Link from "next/link";
 import Footer from "../../components/footer.js";
 
@@ -6,8 +8,19 @@ export default function SignUp() {
   return (
     <>
       <Head>
-        <title>Sign-Up</title>
-        <meta name="description" content="Information regarding schedule and availability" key="desc" />
+        <link rel="icon" href="favicon.ico" />
+        <title>{pageData['signUp'].index.title}</title>
+
+        <meta name="title" content={pageData['signUp'].index.title} />
+        <meta name="description" content={pageData['signUp'].index.description} key="desc" />
+
+        <meta property="og:image" content={pageData['signUp'].index.image} />
+        <meta property="og:image:alt" content={pageData['signUp'].index.alt} />
+        <meta property="og:title" content={pageData['signUp'].index.title} />
+        <meta property="og:description" content={pageData['signUp'].index.description} />
+        <meta property="og:site_name" content={"Site Name"} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://pages-router-eight.vercel.app${pageData['signUp'].index.path}`} />
       </Head>
 
       <div className="flex items-center justify-center min-h-screen mx-4 my-6">

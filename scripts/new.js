@@ -14,7 +14,6 @@ const fileName = `${providedFilename}.md`;
 const filePath = path.join('posts', fileName);
 const content =
   `---
-path: '/posts/${providedFilename}'
 image: '/profile.jpg'
 alt: 'Alt'
 title: 'Title'
