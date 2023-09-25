@@ -6,109 +6,70 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* @font-face {
+    font-family: '';
+    src: url('../public/fonts/.otf');
+} */
+
 @layer base {
-
   html, body {
-    @apply
-      w-full h-full bg-white dark:bg-black font-sans leading-relaxed
+    @apply 
+      bg w-full h-full scroll-smooth
+      font-sans leading-relaxed text-inherit antialiased
   }
 
-  h1 {
-    @apply text-4xl font-semibold leading-3 tracking-wider text-black dark:text-white
-  }
-  h2 {
-    @apply text-3xl font-medium leading-loose tracking-wide text-black dark:text-white
-  }
+  h1 { @apply text-5xl font-semibold leading-tight tracking-normal }
+  h2 { @apply text-3xl font-medium leading-loose tracking-wide }
+  h3 { @apply text-4xl font-semibold leading-[1.3] tracking-normal }
+  h4 { @apply text-2xl font-semibold leading-snug tracking-normal }
+  h5 { @apply text-xl font-semibold leading-snug tracking-normal }
+  h6 { @apply text-xl font-semibold leading-snug tracking-normal }
 
-  p {
-    @apply text-lg text-main
-  }
+  p { @apply text-xl font-normal leading-relaxed}
+  p.lead { @apply text-base font-light leading-relaxed }
+  p.small { @apply text-sm font-light leading-normal }
 
-  article {
-    @apply text-lg
-  }
+  article { @apply text-lg }
+  label { @apply text block mb-2 font-semibold }
 }
 
 @layer components {
-  .btn {
-    @apply rounded border-0 font-medium hover:font-semibold text-white text-opacity-90 hover:text-opacity-100 dark:text-black dark:text-opacity-90 dark:hover:text-opacity-100 bg-black bg-opacity-90 hover:bg-opacity-100 dark:bg-white dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300
-  }
-  .drawer-btn {
-    @apply rounded border-0 font-medium hover:font-semibold text-black text-opacity-90 hover:text-opacity-100 dark:text-white dark:text-opacity-90 dark:hover:text-opacity-100 bg-white bg-opacity-90 hover:bg-opacity-100 dark:bg-black dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300
-  }
-  .menu-btn {
-    @apply text-white text-opacity-90 dark:text-black dark:text-opacity-90 hover:text-opacity-70 ease-linear transition duration-300
-  }
-  .menu-btn.clicked {
-    @apply text-white text-opacity-30 dark:text-black dark:text-opacity-30 hover:text-opacity-50 ease-linear transition duration-300
-  }
+  .btn { @apply text-invert bg-invert rounded border-0 font-medium hover:font-semibold text-opacity-90 hover:text-opacity-100 dark:text-opacity-90 dark:hover:text-opacity-100 bg-opacity-90 hover:bg-opacity-10 dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300 }
+  
+  .drawer { @apply bg-invert bg-opacity-75 dark:bg-opacity-75 }
+  .drawer-btn { @apply text bg rounded border-0 font-medium hover:font-semibold text-opacity-90 hover:text-opacity-100 dark:text-opacity-90 dark:hover:text-opacity-100 bg-opacity-90 hover:bg-opacity-100 dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300 }
 
-  .link {
-    @apply bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300
-  }
-  .footer {
-    @apply bg-black bg-opacity-90 dark:bg-white dark:bg-opacity-90
-  }
+  .menu { @apply bg-invert }
+
+  .menu-btn { @apply text-invert text-opacity-90 dark:text-opacity-90 hover:text-opacity-70 ease-linear transition duration-300 }
+  .menu-btn.clicked { @apply text-invert text-opacity-30 dark:text-opacity-30 hover:text-opacity-50 ease-linear transition duration-300 }
+
+  .link { @apply bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300 }
+  .social { @apply text-invert opacity-75 drop-shadow-2xl hover:text-opacity-50 transition duration-300 }
 }
 
 @layer utilities {
-  .back {
-    @apply text-gray-600 dark:text-gray-300 text-opacity-50
-  }
-  .date {
-    @apply font-semibold text-gray-600 dark:text-gray-400
-  }
-  .desc {
-    @apply text-gray-700 dark:text-gray-300
-  }
-  .social {
-    @apply text-white dark:text-black opacity-75 drop-shadow-2xl hover:text-opacity-50 transition duration-300
-  }  
-  .title {
-    @apply text-2xl font-semibold text-main link
-  }
+  .text { @apply text-black dark:text-white }
+  .text-invert { @apply text-white dark:text-black }
 
-  .menu {
-    @apply bg-black dark:bg-white
-  }
-  .drawer {
-    @apply bg-black bg-opacity-75 dark:bg-white dark:bg-opacity-75
-  }
-  /*
-  .bg {
-    @apply bg-black dark:bg-white
-  }
-  .bg-invert {
-    @apply bg-white dark:bg-black
-  }
-  */
+  .bg { @apply bg-white dark:bg-black }
+  .bg-invert { @apply bg-black dark:bg-white }
 
-  .text {
-    @apply text-white dark:text-black
-  }
-  .text-main {
-    @apply text-black dark:text-white
-  }
-  /*
-  .text {
-    @apply text-black dark:text-white
-  }
-  .text-invert {
-    @apply text-white dark:text-black
-  }
-  */
-
-  /* .image {
-    @apply rounded-full mb-8 hover:animate-pulse ease-in-out
-    @apply rounded-lg
-  } */
+  .back { @apply text-gray-600 dark:text-gray-300 text-opacity-50 }
+  .date { @apply font-semibold text-gray-600 dark:text-gray-400 }
+  .desc { @apply text-gray-700 dark:text-gray-300 }
+  .title { @apply text link text-2xl font-semibold }
 }
 
-/* img {
-  display: block;
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 50%;
-} */
+.animate-gradient {
+  background-size: 300%;
+  -webkit-animation: animatedgradient 6s ease infinite alternate;
+  -moz-animation: animatedgradient 6s ease infinite alternate;
+  animation: animatedgradient 6s ease infinite alternate;
+}
+@keyframes animatedgradient {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}

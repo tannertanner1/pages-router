@@ -68,13 +68,13 @@ export default function Email() {
     <div className="relative flex items-center justify-center mt-4 py-4 px-8">
       <form onSubmit={handleSubmit}>
 
-        <label htmlFor="name" className="block mb-2 font-semibold text-main">Name</label>
+        <label htmlFor="name" className="block mb-2 font-semibold text">Name</label>
         <input
           placeholder="Name" className="mb-6 w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 focus:outline-none"
           id="name" value={name} onChange={(e) => setName(e.target.value)}
         ></input>
 
-        <label htmlFor="subject" className="block mb-2 font-semibold opacity-90 drop-shadow-sm text-main">Subject</label>
+        <label htmlFor="subject" className="block mb-2 font-semibold opacity-90 drop-shadow-sm text">Subject</label>
         <select
           className="mb-6 w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 focus:outline-none font-medium appearance-none"
           id="subject" value={subject} onChange={(e) => setSubject(e.target.value)}
@@ -84,14 +84,14 @@ export default function Email() {
           <option value="Billing">Billing</option>
         </select>
         
-        <label className="block mb-2 font-semibold text-main" htmlFor="name">Email</label>
+        <label className="block mb-2 font-semibold text" htmlFor="name">Email</label>
         <input 
           placeholder="Email" className={`${emailError ? '' : 'mb-6'} w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 focus:outline-none`}
           id="email" value={email} onChange={(e) => { setEmail(e.target.value); setEmailError(''); }}
         ></input>
         <div className="mt-1 mb-1 text-red-500 text-sm">{emailError}</div>
 
-        <label htmlFor="message" className="block mb-2 font-semibold text-main">Message</label>
+        <label htmlFor="message" className="block mb-2 font-semibold text">Message</label>
         <textarea
           placeholder="Message" className={`${messageError ? '' : 'mb-5'} h-24 w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 resize-none focus:outline-none`}
           id="message" value={message} onChange={(e) => { setMessage(e.target.value); setMessageError(''); }}

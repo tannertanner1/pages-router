@@ -1,55 +1,49 @@
-import { useState, useEffect } from "react"
-import Navbar from "../components/navbar.js";
-import Nav from "../components/nav.js";
-// import Footer from "../components/footer.js";
+import { useState, useEffect } from "react";
+
+import dynamic from "next/dynamic";
+const Link = dynamic(() => import("react-scroll").then((mod) => mod.Link), { ssr: false });
+
+import Navbar from "./navbar.js";
+import Footer from "./footer.js";
 
 export default function Layout({ children }) {
   const [isDrawer, setDrawer] = useState(false);
-  const [isAccordion, setAccordion] = useState('');
-  const [isDropdown, setDropdown] = useState(false);
   const [isWindow, setWindow] = useState(0);
 
   const handleDrawer = () => {
     setDrawer(!isDrawer);
-    setAccordion('');
-  };
-
-  const handleDropdown = () => {
-    setDropdown(!isDropdown);
   };
 
   useEffect(() => {
     setWindow(window.innerWidth);
-    const handleResize = () => {
+    const handleWindow = () => {
       setWindow(window.innerWidth);
     };
-
-    window.addEventListener("resize", handleResize);
-
+    window.addEventListener("resize", handleWindow);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("resize", handleWindow);
     };
   }, []);
 
-  return (
-    <>
-      { isWindow >= 1024 ? (
-        // "hidden lg:block"
-        <Nav isDropdown={isDropdown} setDropdown={setDropdown} handleDropdown={handleDropdown} />
-      ) : (
-        // "lg:hidden"
-        <Navbar isDrawer={isDrawer} handleDrawer={handleDrawer} isAccordion={isAccordion} setAccordion={setAccordion} />
-      )}
+  useEffect(() => {
+    if (isWindow > 1024) {
+      setDrawer(false);
+    }
+  }, [isWindow]);
 
-      { isDrawer ? (
-        <>
-        </>
-      ) : (
-        <>
-        {children}
-        {/* <Footer /> */}
-        </>
-      )}
-    </>
+  useEffect(() => {
+    if (isDrawer) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [isDrawer]);
+
+  return (
+    <Link to='' smooth={true}>
+      <Navbar isDrawer={isDrawer} handleDrawer={handleDrawer} />
+      {children}
+      <Footer />
+    </Link>
   );
 }

@@ -1,4 +1,5 @@
 import Head from 'next/head';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import Date from '../../components/date.js';
@@ -41,7 +42,7 @@ export default function Post({ postData }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{postData.title}</title>
 
         <meta name="title" content={postData.title} />
@@ -66,10 +67,11 @@ export default function Post({ postData }) {
         </div>
 
         <div className="prose dark:prose-invert prose-h2:text-gray-800 dark:prose-h2:text-gray-300">
-          <h1 className="font-medium">{postData.title}</h1>
-          <div className="date"><Date dateString={postData.date} /></div>
+        {/* <div className="text-gray-800 dark:text-gray-300"> */}
+          <h1 className="not-prose font-medium">{postData.title}</h1>
+          <div className="not-prose date mt-2"><Date dateString={postData.date} /></div>
   
-          <article dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+          <article className="break-after-auto" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
         </div>
 
         <div className="back text-4xl mt-12">

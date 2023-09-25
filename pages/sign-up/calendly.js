@@ -8,7 +8,7 @@ export default function Calendly() {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['signUp'].calendly.title}</title>
 
         <meta name="title" content={pageData['signUp'].calendly.title} />

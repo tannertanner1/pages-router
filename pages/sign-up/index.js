@@ -2,13 +2,12 @@ import Head from "next/head";
 import { pageData } from "../../meta.js";
 
 import Link from "next/link";
-import Footer from "../../components/footer.js";
 
 export default function SignUp() {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['signUp'].index.title}</title>
 
         <meta name="title" content={pageData['signUp'].index.title} />
@@ -29,8 +28,6 @@ export default function SignUp() {
           <div className="relative mt-2 mb-60"><button className="btn w-28 h-14" aria-label="Calendly.com"><Link href="/sign-up/calendly">Calendly</Link></button></div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

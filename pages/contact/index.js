@@ -2,13 +2,12 @@ import Head from "next/head";
 import { pageData } from "../../meta.js";
 
 import Link from "next/link";
-import Footer from "../../components/footer.js";
 
 export default function Contact() {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['contact'].index.title}</title>
 
         <meta name="title" content={pageData['contact'].index.title} />
@@ -29,8 +28,6 @@ export default function Contact() {
           <div className="relative mt-2 mb-60"><button className="btn w-28 h-14" aria-label="Sendgrid"><Link href="/contact/sendgrid">Sendgrid</Link></button></div>
         </div>
       </div>
-
-      <Footer />
     </>
   );
 }

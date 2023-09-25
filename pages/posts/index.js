@@ -16,7 +16,7 @@ export default function Posts({ allPostsData }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['posts'].title}</title>
 
         <meta name="title" content={pageData['posts'].title} />
@@ -38,15 +38,20 @@ export default function Posts({ allPostsData }) {
         <section className="text-xl leading-6 p-1">
           <h1 className="text-3xl text-gray-700 text-opacity-50 dark:text-gray-300 leading-8 py-8">Posts</h1>
           
-          <ul className="list-none p-0 m-0">
+          {/* <ul className="list-none p-0 m-0"> */}
+          <ul className="">
             {allPostsData.map(({ id, image, alt, title, date, description }) => (
               <li className="mb-6 flex" key={id}>
-                <div className="content flex-1">
+                {/* <div className="content flex-1 py-6"> */}
+                <div className="content flex-1 py-2">
                   <div className="title mb-2"><Link href={`/posts/${id}`}>{title}</Link></div>
-                  <div className="date text-sm mt-1"><Date dateString={date} /></div>
-                  <div className="desc text-lg mt-3">{description}</div>
+                  <div className="date text-xs mt-1"><Date dateString={date} /></div>
+                  <div className="desc text-lg mt-3 break-after-auto">{description}</div>
                 </div>
-                <Link priority={true} href={`/posts/${id}`}><Image src={image} alt={alt} width={100} height={100} className="rounded-lg" /></Link>        
+                {/* <div className="mt-3 mb-3"> */}
+                <div className="mt-3 mb-3">
+                  <Link priority={true} href={`/posts/${id}`}><Image src={image} alt={alt} width={100} height={100} className="rounded-lg" /></Link>        
+                </div>
               </li>
             ))}
           </ul>

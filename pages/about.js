@@ -2,13 +2,12 @@ import Head from "next/head";
 import { pageData } from "../meta.js";
 
 import Content from "../components/content.js";
-import Footer from "../components/footer.js";
 
 export default function About() {
   return (
     <>
       <Head>
-      <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['about'].title}</title>
 
         <meta name="title" content={pageData['about'].title} />
@@ -22,9 +21,7 @@ export default function About() {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://pages-router-eight.vercel.app${pageData['about'].path}`} />
       </Head>
-
       <Content />
-      <Footer />
     </>
   );
 }

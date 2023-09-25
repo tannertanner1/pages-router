@@ -16,7 +16,7 @@ export default function Calcom() {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['signUp'].calcom.title}</title>
 
         <meta name="title" content={pageData['signUp'].calcom.title} />

@@ -1,6 +1,6 @@
 ---
 image: '/assets/ukulele-1.png'
-alt: 'AI generated ukelele'
+alt: 'DALL-E generated ukulele painting'
 title: 'Ukelele Lessons Online'
 date: '2023-07-07'
 description: 'Best ukelele lessons online'

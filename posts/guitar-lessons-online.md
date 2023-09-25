@@ -1,6 +1,6 @@
 ---
 image: '/assets/guitar-2.png'
-alt: 'AI generated guitar'
+alt: 'DALL-E generated guitar painting'
 title: 'Guitar Lessons Online'
 date: '2023-07-06'
 description: 'Best guitar lessons online'

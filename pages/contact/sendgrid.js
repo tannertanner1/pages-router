@@ -5,7 +5,7 @@ export default function Sendgrid() {
   return (
     <>
       <Head>
-        <link rel="icon" href="favicon.ico" />
+        <link rel="icon" href="images/favicon.ico" />
         <title>{pageData['contact'].sendgrid.title}</title>
 
         <meta name="title" content={pageData['contact'].sendgrid.title} />
