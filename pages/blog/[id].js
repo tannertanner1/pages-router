@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 export default function Post({ postData }) {
-  const url = `https://pages-router-eight.vercel.app/posts/${postData.id}`;
+  const url = `https://pages-router-eight.vercel.app/blog/${postData.id}`;
   const Course = {
     "@context": "https://schema.org",
     "@type": "Course",
@@ -23,7 +23,7 @@ export default function Post({ postData }) {
     "description": postData.description,
     "provider": {
       "@type": "Organization",
-      "name": "Site Name",
+      "name": "Temp Suscip",
       "sameAs": url
     }
   };
@@ -32,7 +32,7 @@ export default function Post({ postData }) {
   //   "@type": "BlogPosting",
   //   "author": {
   //     "@type": "Person",
-  //     "name": 'Site Name'
+  //     "name": 'Temp Suscip'
   //   },
   //   "thumbnail": postData.image,
   //   "headline": postData.title,
@@ -61,7 +61,7 @@ export default function Post({ postData }) {
       <div className="max-w-screen-sm px-4 mt-12 mb-24 mx-auto">
         
         <div className="flex flex-col items-center mb-3">
-          <Link href="/posts">
+          <Link href="/blog">
             <Image priority={true} src={postData.image} alt={postData.alt} height={144} width={144} className="rounded-full mb-8" />
           </Link>
         </div>
@@ -72,10 +72,6 @@ export default function Post({ postData }) {
           <div className="not-prose date mt-2"><Date dateString={postData.date} /></div>
   
           <article className="break-after-auto" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </div>
-
-        <div className="back text-4xl mt-12">
-          <Link href="/posts">←</Link>
         </div>
 
       </div>

@@ -59,11 +59,11 @@ export const pageData = {
       description: 'Cal.com link',
     },
   },
-  posts: {
-    path: '/posts',
+  blog: {
+    path: '/blog',
     image: '/profile.png',
     alt: 'Alt text',
-    title: 'Posts | Temp Suscip',
+    title: 'Blog | Temp Suscip',
     description: 'Blog posts',
   },
 };

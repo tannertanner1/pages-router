@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
 
-import dynamic from "next/dynamic";
-const Link = dynamic(() => import("react-scroll").then((mod) => mod.Link), { ssr: false });
-
 import Navbar from "./navbar.js";
 import Footer from "./footer.js";
 
@@ -40,10 +37,10 @@ export default function Layout({ children }) {
   }, [isDrawer]);
 
   return (
-    <Link to='' smooth={true}>
+    <>
       <Navbar isDrawer={isDrawer} handleDrawer={handleDrawer} />
       {children}
       <Footer />
-    </Link>
+    </>
   );
 }
