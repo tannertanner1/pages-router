@@ -17,7 +17,7 @@ export default function About() {
         <meta property="og:image:alt" content={pageData['about'].alt} />
         <meta property="og:title" content={pageData['about'].title} />
         <meta property="og:description" content={pageData['about'].description} />
-        <meta property="og:site_name" content={"Site Name"} />
+        <meta property="og:site_name" content="Temp Suscip" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://pages-router-eight.vercel.app${pageData['about'].path}`} />
       </Head>

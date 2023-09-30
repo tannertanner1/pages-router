@@ -52,7 +52,7 @@ export default function Post({ postData }) {
         <meta property="og:image:alt" content={postData.alt} />
         <meta property="og:title" content={postData.title} />
         <meta property="og:description" content={postData.description} />
-        <meta property="og:site_name" content={"Site Name"} />
+        <meta property="og:site_name" content="Temp Suscip" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
 

@@ -13,6 +13,20 @@ export const pageData = {
     title: 'About | Temp Suscip',
     description: 'About lessons, reviews, and policy',
   },
+  policy: {
+    path: '/policy',
+    image: '/profile.png',
+    alt: 'Alt text',
+    title: 'Policy | Temp Suscip',
+    description: 'Studio policy',
+  },
+  blog: {
+    path: '/blog',
+    image: '/profile.png',
+    alt: 'Alt text',
+    title: 'Blog | Temp Suscip',
+    description: 'Blog posts',
+  },
   contact: {
     index: {
       path: '/contact',
@@ -58,12 +72,5 @@ export const pageData = {
       title: 'Sign Up | Temp Suscip',
       description: 'Cal.com link',
     },
-  },
-  blog: {
-    path: '/blog',
-    image: '/profile.png',
-    alt: 'Alt text',
-    title: 'Blog | Temp Suscip',
-    description: 'Blog posts',
   },
 };

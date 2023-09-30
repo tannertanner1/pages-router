@@ -37,10 +37,10 @@ export default function Layout({ children }) {
   }, [isDrawer]);
 
   return (
-    <>
+    <div className="">
       <Navbar isDrawer={isDrawer} handleDrawer={handleDrawer} />
       {children}
       <Footer />
-    </>
+    </div>
   );
 }

@@ -9,21 +9,21 @@ module.exports = {
   theme: {
     extend: {
       typography: {
-        // DEFAULT: {
-        //   css: {
-        //     'img': {
-        //       display: 'block',
-        //       float: 'none',
-        //       // marginLeft: 'auto'
-        //       // marginRight: 'auto'
-        //       margin: 'auto',
-        //       width: 'auto',
-        //       height: 'auto',
-        //       maxWidth: '100%', // makes images responsive by default
-        //       maxHeight: 'auto', // allows images to maintain their aspect ratio
-        //     },
-        //   },
-        // },
+        DEFAULT: {
+          css: {
+            'img': {
+              display: 'block',
+              float: 'none',
+              // marginLeft: 'auto'
+              // marginRight: 'auto'
+              margin: 'auto',
+              width: 'auto',
+              height: 'auto',
+              maxWidth: '100%', // makes images responsive by default
+              maxHeight: 'auto', // allows images to maintain their aspect ratio
+            },
+          },
+        },
       },
       fontFamily: {
         dancingScript: ['Dancing Script', 'cursive'],
