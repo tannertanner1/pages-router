@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Navbar({ isDrawer, handleDrawer }) {
   return (
     <div className={`text-invert bg-invert sticky top-0 z-10 px-4 py-4 ${isDrawer ? 'h-screen' : ''}`}>
-      
+
       <div className="flex flex-row justify-between items-center">
         <Link href="/" onClick={isDrawer ? handleDrawer : undefined} className="flex items-center text-lg font-light lg:hover:opacity-90">
           <div className="rounded-full w-[24px] h-[24px] ml-3.5 mr-2 bg-white dark:bg-black" />

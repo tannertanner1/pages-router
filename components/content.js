@@ -32,7 +32,7 @@ export default function Content({  }) {
       
       Etiam fermentum dapibus gravida. Curabitur eu faucibus felis, sit amet bibendum nisl sapien malesuada.
       
-      Nunc ipsum est, pharetra sed rhoncus non, cursus non felis. Sed ut lorem commodo, porttitor lectus vel, venenatis nulla.
+
       `,
       i: policyImg,
       b: "bg-blue-50"
@@ -84,7 +84,21 @@ export default function Content({  }) {
               <div className="mx-1.5">
                 <Link href={`/about#${a}`} onClick={() => handleScroll(a)} className="text-gray-500 uppercase tracking-wide text-xs font-semibold bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300">{h}</Link>
                 <div className="block text-black text-sm leading-tight font-medium mt-1.5">{d}</div>
-                <div className="text-slate-500 text-sm">{p}</div>
+                <div className="text-slate-500 text-sm">
+                  {p}
+                  
+                  <span className={`${index === 1 ? "flex justify-end mr-1.5" : "hidden"}`}>
+                    <Link href="/policy" className="text-xs drop-shadow-sm">
+                      <button className="inline-flex items-center tracking-wide font-medium bg-transparent shadow-black/10 shadow-sm rounded-md px-3 py-1.5 text-black outline outline-1 hover:opacity-80 active:opacity-90 ease-in-out">
+                        Read more
+                        <svg className="items-center ml-1.5 w-4 h-4 stroke stroke-black fill-black" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 14 10" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1 5h12m0 0L9 1m4 4L9 9" />
+                        </svg>
+                      </button>
+                    </Link>
+                  </span>
+                </div>
+
               </div>
             </div>
           </div>

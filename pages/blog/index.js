@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Date from '../../components/date.js';
 
 import { getSortedPostsData } from '../../lib/posts.js';
+
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
   return { props: { allPostsData } };
@@ -29,31 +30,24 @@ export default function Blog({ allPostsData }) {
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://pages-router-eight.vercel.app${pageData['blog'].path}`} />
       </Head>
-      <div className="max-w-screen-sm px-4 mt-12 mb-24 mx-auto">     
-        <div className="flex flex-col items-center">
-          <Link href="/"><Image priority={true} src="/profile.jpg" alt="alt" height={144} width={144} className="rounded-full mb-8" /></Link>        
-        </div>
 
-        <section className="text-xl leading-6 p-1">
-          <h1 className="text-3xl text-gray-700 text-opacity-50 dark:text-gray-300 leading-8 py-8">Blog</h1>
+      <ul className="max-w-screen-sm h-screen mx-auto pt-8 px-4">
+        {allPostsData.map(({ id, image, alt, title, date, description }) => (
+          <li className="flex pb-6 justify-between pl-3 md:pl-0 gap-x-4" key={id}>
+            <div className="flex flex-col">
+              <span className="text-xs leading-relaxed text-gray-600 dark:text-gray-400 pb-2"><Date dateString={date} /></span>
+              <div className="text text-base font-semibold bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300 pb-1"><Link href={`/blog/${id}`}>{title}</Link></div>
+              <div className="text-xs text-gray-700 dark:text-gray-300">{description}</div>
+            </div>
 
-          {/* <ul className="list-none p-0 m-0"> */}
-          <ul className="">
-            {allPostsData.map(({ id, image, alt, title, date, description }) => (
-              <li className="mb-6 flex" key={id}>
-                <div className="content flex-1 py-2">
-                  <div className="title mb-2"><Link href={`/blog/${id}`}>{title}</Link></div>
-                  <div className="date text-xs mt-1"><Date dateString={date} /></div>
-                  <div className="desc text-lg mt-3 break-after-auto">{description}</div>
-                </div>
-                <div className="mt-3 mb-3">
-                  <Link priority={true} href={`/blog/${id}`}><Image src={image} alt={alt} width={100} height={100} className="rounded-lg" /></Link>        
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      </div>
+            <div className="flex-none mr-3 md:ml-3 py-2">
+              <Link priority={true} href={`/blog/${id}`}>
+                <Image src={image} alt={alt} width={96} height={96} className="rounded-md" />
+              </Link>        
+            </div>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

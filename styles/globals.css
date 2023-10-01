@@ -6,7 +6,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap'); */
 /* @font-face {
     font-family: '';
     src: url('../public/fonts/.otf');
@@ -34,32 +34,11 @@
   label { @apply text block mb-2 font-semibold }
 }
 
-@layer components {
-  .btn { @apply text-invert bg-invert rounded border-0 font-medium hover:font-semibold text-opacity-90 hover:text-opacity-100 dark:text-opacity-90 dark:hover:text-opacity-100 bg-opacity-90 hover:bg-opacity-10 dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300 }
-  
-  .drawer { @apply bg-invert bg-opacity-75 dark:bg-opacity-75 }
-  .drawer-btn { @apply text bg rounded border-0 font-medium hover:font-semibold text-opacity-90 hover:text-opacity-100 dark:text-opacity-90 dark:hover:text-opacity-100 bg-opacity-90 hover:bg-opacity-100 dark:bg-opacity-90 dark:hover:bg-opacity-100 shadow-inner drop-shadow-lg transition-opacity duration-300 }
-
-  .menu { @apply bg-invert }
-
-  .menu-btn { @apply text-invert text-opacity-90 dark:text-opacity-90 hover:text-opacity-70 ease-linear transition duration-300 }
-  .menu-btn.clicked { @apply text-invert text-opacity-30 dark:text-opacity-30 hover:text-opacity-50 ease-linear transition duration-300 }
-
-  .link { @apply bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300 }
-  .social { @apply text-invert opacity-75 drop-shadow-2xl hover:text-opacity-50 transition duration-300 }
-}
-
 @layer utilities {
   .text { @apply text-black dark:text-white }
   .text-invert { @apply text-white dark:text-black }
-
   .bg { @apply bg-white dark:bg-black }
   .bg-invert { @apply bg-black dark:bg-white }
-
-  .back { @apply text-gray-600 dark:text-gray-300 text-opacity-50 }
-  .date { @apply font-semibold text-gray-600 dark:text-gray-400 }
-  .desc { @apply text-gray-700 dark:text-gray-300 }
-  .title { @apply text link text-2xl font-semibold }
 }
 
 .animate-gradient {

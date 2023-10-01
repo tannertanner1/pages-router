@@ -25,14 +25,14 @@ module.exports = {
           },
         },
       },
-      fontFamily: {
-        dancingScript: ['Dancing Script', 'cursive'],
-      },
-      colors: {
-        lite: 'white',
-        dark: 'black',
-        neut: 'neutral',
-      },
+      // fontFamily: {
+      //   dancingScript: ['Dancing Script', 'cursive'],
+      // },
+      // colors: {
+      //   lite: 'white',
+      //   dark: 'black',
+      //   neut: 'neutral',
+      // },
 
       keyframes: {
         animatedgradient: {

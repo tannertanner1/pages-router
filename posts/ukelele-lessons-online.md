@@ -1,9 +1,9 @@
 ---
 image: '/assets/ukulele-1.png'
-alt: 'DALL-E generated ukulele painting'
+alt: 'Alt'
 title: 'Ukelele Lessons Online'
 date: '2023-07-07'
-description: 'Best ukelele lessons online'
+description: 'Cras non molestie lorem. Nullam ornare purus faucibus quam in pellentesque hendrerit. Facilisis sodales auctor quis lectus.'
 ---
 
 ## Introduction

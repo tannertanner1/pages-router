@@ -66,7 +66,7 @@ export default function Email() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center h-screen p-4 overflow-y-auto">
 
-      <div className="inline-flex md:w-1/2 md:h-1/2 md:pl-4">
+      <div className="inline-flex md:w-1/2 md:h-3/6 md:pl-4">
         <div className="text text-center md:text-left md:w-5/6 h-fit md:h-1/2">
           <h2 className="text-2xl font-semibold pb-3 md:pb-6 pt-3 md:pt-0">Praesent gravida ex eu mattis tempus</h2>
           <div className="max-w-sm min-w-full space-y-0 md:space-y-1.5 pb-6">
@@ -106,23 +106,23 @@ export default function Email() {
         <div className="mb-3">
           <input 
             placeholder="Email"
-            className={`${emailError ? '' : 'mb-5'} w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 focus:outline-none`}
+            className={`${emailError ? '' : 'mb-4'} w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 focus:outline-none`}
             id="email"
             value={email}
             onChange={(e) => { setEmail(e.target.value); setEmailError(''); }}
           />
-          <div className="pl-2 text-xs mt-1.5 mb-1 text-red-500">{emailError}</div>
+          <div className="pl-2 text-xs pt-1.5 mb-1 text-red-500">{emailError}</div>
         </div>
 
         <div className="mb-3">
           <textarea
             placeholder="Message"
-            className={`${messageError ? '' : 'mb-4'} h-24 w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 resize-none focus:outline-none`}
+            className={`${messageError ? '' : 'mb-4'} h-28 w-full rounded p-2 text-black bg-opacity-90 shadow-md pl-4 pr-4 resize-none focus:outline-none`}
             id="message"
             value={message}
             onChange={(e) => { setMessage(e.target.value); setMessageError(''); }}
           />
-          <div className="pl-2 text-xs mb-2 text-red-500">{messageError}</div>
+          <div className="pl-2 text-xs pt-0.5 mb-2 text-red-500">{messageError}</div>
         </div>
 
         <button type="submit" className="font-medium rounded-md w-full py-2 px-4 mb-6 text-invert bg-invert hover:bg-black/90 active:bg-black/95 dark:hover:bg-white/95 dark:active:bg-white/90 focus:outline-none transition-opacity ease-in duration-300">

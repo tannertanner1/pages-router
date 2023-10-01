@@ -51,13 +51,13 @@ export default function Home() {
 
           <div className="flex gap-x-8 mt-6 justify-center items-center">
             <Link href="/about" className="items-center justify-center drop-shadow-lg">
-              <button onClick={handleClick} className="inline-flex text-invert text-base font-medium hover:font-semibold border-0 text-opacity-90 hover:text-opacity-100 dark:text-opacity-90 dark:hover:text-opacity-100 bg-opacity-90 hover:bg-opacity-100 dark:bg-opacity-90 dark:hover:bg-opacity-100 transition hover:-translate-y-1 hover:scale-110 duration-300">
-                <span className="relative rounded-md px-5 py-2.5 transition-all ease-in bg-invert">Learn More</span>
+              <button className="inline-flex text-invert text-base font-medium border-0 transition duration-300">
+                <span className="relative rounded-md px-5 py-2.5 transition-all ease-in bg-invert lg:hover:-translate-y-1 lg:hover:scale-110">Learn More</span>
               </button>
             </Link>
             <Link href="/sign-up" className="drop-shadow-lg">
-              <button onClick={handleClick} className="inline-flex items-center justify-center p-0.5 text-base font-medium hover:font-semibold rounded-lg text-black hover:text-white dark:text-white shadow-lg dark:shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 dark:shadow-blue-500/60 dark:hover:shadow-blue-500/40 bg-gradient-to-br from-orange-700 via-blue-500 to-green-400 group group-hover:from-orange-700 group-hover:via-blue-500 group-hover:to-green-400 bg-300% animate-gradient">
-                <span className="relative rounded-md px-5 py-2.5 transition-all ease-in bg duration-7 group-hover:bg-opacity-0">Free Trial</span>
+              <button className="inline-flex items-center justify-center p-0.5 text-base font-medium rounded-lg text-black dark:text-white shadow-lg dark:shadow-lg shadow-blue-500/40 bg-gradient-to-br from-orange-700 via-blue-500 to-green-400 group bg-300% animate-gradient">
+                <span className="relative rounded-md px-5 py-2.5 transition-all ease-in bg duration-7 lg:group-hover:bg-opacity-0">Free Trial</span>
               </button>
             </Link>
           </div>

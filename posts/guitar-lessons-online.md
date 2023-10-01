@@ -1,9 +1,9 @@
 ---
 image: '/assets/guitar-2.png'
-alt: 'DALL-E generated guitar painting'
+alt: 'Alt'
 title: 'Guitar Lessons Online'
 date: '2023-07-06'
-description: 'Best guitar lessons online'
+description: 'Donec hendrerit mi eu nunc tincidunt iaculis. Duis finibus rhoncus lacus. Vivamus eleifend, nisl at fringilla varius.'
 ---
 
 ## Zero to Hero
