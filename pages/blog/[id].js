@@ -1,10 +1,10 @@
-import Head from 'next/head';
+import Head from "next/head";
+import Date from "../../components/date.js";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import Date from '../../components/date.js';
+import Link from "next/link";
+import Image from "next/image";
 
-import { getAllPostIds, getPostData } from '../../lib/posts.js';
+import { getAllPostIds, getPostData } from "../../lib/posts.js";
 export async function getStaticProps({ params }) {
   const postData = await getPostData(params.id);
   return { props: { postData } };
@@ -39,6 +39,18 @@ export default function Post({ postData }) {
   //   "datePublished": postData.date,
   //   "description": postData.description
   // };
+
+  const prose=`prose dark:prose-invert leading-tight
+    prose-h2:text-base prose-h2:leading-tight prose-h2:tracking-wide prose-h2:font-semibold prose-h2:text-zinc-800 dark:prose-h2:text-gray-200
+    prose-p:text-sm prose-p:leading-tight prose-p:font-normal prose-p:text-neutral-800 dark:prose-p:text-neutral-400
+    prose-strong:tracking-wide prose-strong:text-neutral-600 dark:prose-strong:text-neutral-400
+    prose-em:tracking-tight prose-em:text-opacity-80 dark:prose-em:text-opacity-80 prose-em:text-neutral-600 dark:prose-em:text-neutral-400
+    prose-blockquote:border-neutral-800 dark:prose-blockquote:border-neutral-400 prose-blockquote:border-opacity-30 dark:prose-blockquote:border-opacity-30 prose-blockquote:font-light prose-blockquote:leading-relaxed
+    prose-li:text-xs prose-li:font-medium prose-li:text-zinc-600 dark:prose-li:text-zinc-300
+    prose-a:text-stone-700 dark:prose-a:text-stone-400
+    prose-img:rounded-full
+  `;
+
   return (
     <>
       <Head>
@@ -58,23 +70,15 @@ export default function Post({ postData }) {
 
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Course) }} />
       </Head>
-      <div className="max-w-screen-sm px-4 mt-12 mb-24 mx-auto">
-        
-        <div className="flex flex-col items-center mb-3">
-          <Link href="/blog">
-            <Image priority={true} src={postData.image} alt={postData.alt} height={144} width={144} className="rounded-full mb-8" />
-          </Link>
-        </div>
 
-        <div className="prose dark:prose-invert prose-h2:text-gray-800 dark:prose-h2:text-gray-300">
-        {/* <div className="text-gray-800 dark:text-gray-300"> */}
-          <h1 className="not-prose font-medium">{postData.title}</h1>
-          <div className="not-prose date mt-2"><Date dateString={postData.date} /></div>
-  
-          <article className="break-after-auto" dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
-        </div>
-
-      </div>
+      <section className={`${prose} min-w-screen-sm min-h-screen px-6 py-6 mx-auto`}>
+        <header>
+          <Link href="/blog" className={postData.title === 'Ukulele Lessons Online' ? 'flex flex-col items-center' : 'hidden'}><Image src={postData.image} alt={postData.alt} height={100} width={100} className="rounded-full mb-6" /></Link>
+          <h1 className="not-prose text text-xl font-bold mb-1">{postData.title}</h1>
+          <span className="not-prose text-xs font-light text-zinc-700 dark:text-zinc-400"><Date dateString={postData.date} /></span>
+        </header>
+        <article dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      </section>
     </>
   );
 }

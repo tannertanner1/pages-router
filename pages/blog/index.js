@@ -1,11 +1,11 @@
-import Head from 'next/head';
+import Head from "next/head";
 import { pageData } from "../../meta.js";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import Date from '../../components/date.js';
+import Link from "next/link";
+import Image from "next/image";
+import Date from "../../components/date.js";
 
-import { getSortedPostsData } from '../../lib/posts.js';
+import { getSortedPostsData } from "../../lib/posts.js";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -36,12 +36,12 @@ export default function Blog({ allPostsData }) {
           <li className="flex pb-6 justify-between pl-3 md:pl-0 gap-x-4" key={id}>
             <div className="flex flex-col">
               <span className="text-xs leading-relaxed text-gray-600 dark:text-gray-400 pb-2"><Date dateString={date} /></span>
-              <div className="text text-base font-semibold bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300 pb-1"><Link href={`/blog/${id}`}>{title}</Link></div>
-              <div className="text-xs text-gray-700 dark:text-gray-300">{description}</div>
+              <h2 className="text text-base font-semibold bg-transparent lg:hover:bg-transparent lg:hover:opacity-80 transition-opacity duration-300 pb-1"><Link href={`/blog/${id}`}>{title}</Link></h2>
+              <p className="text-xs text-gray-700 dark:text-gray-300">{description}</p>
             </div>
 
             <div className="flex-none mr-3 md:ml-3 py-2">
-              <Link priority={true} href={`/blog/${id}`}>
+              <Link priority="true" href={`/blog/${id}`}>
                 <Image src={image} alt={alt} width={96} height={96} className="rounded-md" />
               </Link>        
             </div>

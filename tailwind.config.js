@@ -8,7 +8,8 @@ module.exports = {
   ],
   theme: {
     extend: {
-      typography: {
+      // typography: {
+      typography: ({ theme }) => ({
         DEFAULT: {
           css: {
             'img': {
@@ -19,12 +20,20 @@ module.exports = {
               margin: 'auto',
               width: 'auto',
               height: 'auto',
-              maxWidth: '100%', // makes images responsive by default
+              maxWidth: '50%', // makes images responsive by default
               maxHeight: 'auto', // allows images to maintain their aspect ratio
             },
+            // changes color of list numbers
+            '--tw-prose-counters': theme('colors.zinc[500]'),
+            '--tw-prose-invert-counters': theme('colors.zinc[400]'),
+            // changes color of list bullets
+            '--tw-prose-bullets': theme('colors.zinc[500]'),
+            '--tw-prose-invert-bullets': theme('colors.zinc[400]'),
+            // https://github.com/tailwindlabs/tailwindcss-typography/blob/master/src/styles.js
           },
         },
-      },
+      // },
+      }),
       // fontFamily: {
       //   dancingScript: ['Dancing Script', 'cursive'],
       // },
