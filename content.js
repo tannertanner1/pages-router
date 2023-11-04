@@ -12,9 +12,31 @@ export const img = [
   { image: img3, alt: `A Kid Drawing Near a Laptop by Mikhail Nilov` },
 ];
 
-/**
-@note components/layout
-*/
+/* @note components/layout */
+export const layout = {
+  navbar: {
+    icon: {
+      span: [ `Temp`, `Suscip` ],
+    },
+    div: [
+      { href: `/about`, span: `About` },
+      { href: `/calendar`, span: `Calendar` },
+      { href: `/policy`, span: `Policy` },
+      { href: `/contact`, span: `Contact` },
+    ],
+    button: {
+      href: `/sign-up`,
+      span: `Sign-Up`,
+    },
+  },
+  footer: {
+    copy: `Temp Suscip`,
+    icon: [
+      { href: `https://www.youtube.com`, label: `YouTube` },
+      { href: `https://www.tiktok.com`, label: `TikTok` },
+    ],
+  },
+};
 
 /** @note pages/index */
 export const index = {
@@ -34,7 +56,7 @@ export const index = {
       },
       h2: `Neque porro quisquam est qui dolorem ipsum quia dolor sit`,
       button: [
-        { href: `/about`, span: `Learn More` },
+        { href: `/about`, span: `Learn More`, label: `Learn more about Temp Suscip, the studio policy, and online lessons` },
         { href: `/sign-up`, span: `Free Trial` },
       ],
     },

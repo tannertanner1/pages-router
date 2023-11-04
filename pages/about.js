@@ -25,7 +25,7 @@ export default function About() {
   const handleScroll = (section) => {
     scroller.scrollTo(section, { duration: 800, offset: -100, smooth: "easeInOutQuart" });
   };
-  const background = ["bg-orange-50", "bg-blue-50", "bg-green-50"];
+  const background = ["bg-orange-50/50", "bg-blue-50/50", "bg-green-50/50"];
 
   return (
     <>
