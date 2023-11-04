@@ -1,19 +1,9 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 /* @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities"; */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
-@font-face {
-  font-family: '';
-  src: url('../public/fonts/.otf');
-}
-*/
 
 @layer base {
   html, body {
@@ -21,39 +11,36 @@
       bg w-full h-full scroll-smooth
       font-sans leading-relaxed text-inherit antialiased
   }
-
-  /*
-  h1 { @apply text-5xl font-semibold leading-tight tracking-normal }
-  h2 { @apply text-3xl font-medium leading-loose tracking-wide }
-  h3 { @apply text-4xl font-semibold leading-[1.3] tracking-normal }
-  h4 { @apply text-2xl font-semibold leading-snug tracking-normal }
-  h5 { @apply text-xl font-semibold leading-snug tracking-normal }
-  h6 { @apply text-xl font-semibold leading-snug tracking-normal }
-
-  p { @apply text-xl font-normal leading-relaxed}
-  p.lead { @apply text-base font-light leading-relaxed }
-  p.small { @apply text-sm font-light leading-normal }
-
-  article { @apply }
-  label { @apply }
+  /* 
+  h1 { @apply  }
+  h2 { @apply  }
+  h3 { @apply  }
+  
+  .p { @apply }
+  .p-lead { @apply }
+  .p-small { @apply }
   */
 }
 
 @layer utilities {
-  .text { @apply text-black dark:text-white }
-  .text-invert { @apply text-white dark:text-black }
-  .bg { @apply bg-white dark:bg-black }
-  .bg-invert { @apply bg-black dark:bg-white }
+  .text { @apply text-zinc-900 dark:text-white }
+  .text-invert { @apply text-white dark:text-zinc-900 }
+  .bg { @apply bg-white dark:bg-zinc-900 }
+  .bg-invert { @apply bg-zinc-900 dark:bg-white }
+
+  .href { @apply hover:transition-all hover:ease-in duration-300 border-b hover:border-b-2 border-b-blue-300 dark:hover:border-b-blue-500 font-semibold }
+  /*
+  .bg { @apply bg-white dark:bg-zinc-900 }
+
+  .text-primary { @apply calypso- dark:calypso- }
+  .text-secondary { @apply calypso- dark:calypso- }
+
+  .btn-text-primary { @apply calypso- }
+  .btn-bg-primary { @apply calypso- }
+  .btn-text-secondary { @apply calypso- }
+  .btn-bg-secondary { @apply calypso- }
+  */
 }
 
-.animate-gradient {
-  background-size: 300%;
-  -webkit-animation: animatedgradient 6s ease infinite alternate;
-  -moz-animation: animatedgradient 6s ease infinite alternate;
-  animation: animatedgradient 6s ease infinite alternate;
-}
-@keyframes animatedgradient {
-  0% { background-position: 0% 50% }
-  50% { background-position: 100% 50% }
-  100% { background-position: 0% 50% }
-}
+.animate-gradient { background-size: 300%; -webkit-animation: animatedgradient 6s ease infinite alternate; -moz-animation: animatedgradient 6s ease infinite alternate; animation: animatedgradient 6s ease infinite alternate; }
+@keyframes animatedgradient { 0% { background-position: 0% 50% } 50% { background-position: 100% 50% } 100% { background-position: 0% 50% }}

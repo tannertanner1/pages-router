@@ -1,8 +1,12 @@
 import Head from "next/head";
-import Date from "../../components/date.js";
-
 import Link from "next/link";
 import Image from "next/image";
+
+import { parseISO, format } from "date-fns";
+export function Date({ dateString }) {
+  const date = parseISO(dateString);
+  return <time dateTime={dateString}>{format(date, 'LLLL d, yyyy')}</time>;
+}
 
 import { getAllPostIds, getPostData } from "../../lib/posts.js";
 export async function getStaticProps({ params }) {
@@ -54,12 +58,10 @@ export default function Post({ postData }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="images/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
         <title>{postData.title}</title>
-
         <meta name="title" content={postData.title} />
         <meta name="description" content={postData.description} key="desc" />
-
         <meta property="og:image" content={postData.image} />
         <meta property="og:image:alt" content={postData.alt} />
         <meta property="og:title" content={postData.title} />
@@ -67,7 +69,6 @@ export default function Post({ postData }) {
         <meta property="og:site_name" content="Temp Suscip" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={url} />
-
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(Course) }} />
       </Head>
 

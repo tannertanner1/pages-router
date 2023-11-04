@@ -1,5 +1,5 @@
 ---
-image: '/assets/ukulele-1.png'
+image: '/temp-suscip.png'
 alt: 'Alt'
 title: 'Ukulele Lessons Online'
 date: '2023-07-06'
@@ -25,3 +25,5 @@ description: 'Cras non molestie lorem. Nullam ornare purus faucibus quam in pell
 - Phasellus feugiat sapien
 
 For more information, see [<code>&lt;a&gt;</code> HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) and [element modifiers](https://tailwindcss.com/docs/typography-plugin#element-modifiers).
+
+<!-- https://developers.google.com/style -->
